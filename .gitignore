@@ -1,0 +1,6 @@
+Result
+*.pyc
+db.sqlite3
+TestAPI/*.pyc
+ABBy/*.pyc
+*/migrations/

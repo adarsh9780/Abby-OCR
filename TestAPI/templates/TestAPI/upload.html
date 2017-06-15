@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>ABBYY</title>
+
+        <style>
+            div {
+            background-color: lightgrey;
+            width: 500px;
+            border: 125px;
+            padding: 10%;
+            margin: 10% 100px 40% 30%;
+            text-align: justify;
+            font-size: 16px;
+            color: black;
+            }
+        </style>
+
+    <!-- Bootstrap -->
+        <link href="{% static 'TestAPI/css/bootstrap.min.css' %}" rel="stylesheet">
+    </head>
+
+
+            <body>
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </br>
+                    <a class="btn btn-default" href="/upload/view/" role="button">Show Result</a>
+                    </div>
+                </form>
+            </body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'TestAPI/js/bootstrap.min.js'%}"></script>
+    </body>
+</html>
