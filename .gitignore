@@ -2,7 +2,7 @@ Result
 *.pyc
 db.sqlite3
 TestAPI/*.pyc
-ABBy/*.pyc
+ABBY/*.pyc
 */migrations/
 media/
 static/
