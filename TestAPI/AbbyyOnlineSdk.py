@@ -35,8 +35,8 @@ class AbbyyOnlineSdk:
 	# register at http://cloud.ocrsdk.com/Account/Register
 	# More info on getting your application id and password at
 	# http://ocrsdk.com/documentation/faq/#faq3
-	ApplicationId = "adarsh9780"
-	Password = "PXcjXFiWzu3+gbDSx1S65NQw"
+	ApplicationId = ""
+	Password = ""
 	Proxy = None
 	enableDebugging = 0
 
