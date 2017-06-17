@@ -35,8 +35,8 @@ class AbbyyOnlineSdk:
 	# register at http://cloud.ocrsdk.com/Account/Register
 	# More info on getting your application id and password at
 	# http://ocrsdk.com/documentation/faq/#faq3
-	ApplicationId = ""
-	Password = ""
+	ApplicationId = "your user name"
+	Password = "your ocr-sdk password"
 	Proxy = None
 	enableDebugging = 0
 
