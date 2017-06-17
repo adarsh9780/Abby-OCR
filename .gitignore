@@ -5,5 +5,3 @@ TestAPI/*.pyc
 ABBY/*.pyc
 */migrations/
 media/
-static/
-
