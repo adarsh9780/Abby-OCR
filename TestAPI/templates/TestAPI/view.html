@@ -27,9 +27,28 @@
 
         <div>
             <body>
-                <p>{{ text|linebreaksbr }}</p>
+                <form method='post', action=".">
+                    First name:<br>
+                    <input type="text" name="firstname" value="{{ firstName }}">
+                    <br>
+                    Last name:<br>
+                    <input type="text" name="lastname" value="{{ lastName }}">
+                    <br>
+                    Mobile No:<br>
+                    <input type="text" name="Mobile" value="{{ phn }}">
+                    <br>
+                    Date:<br>
+                    <input type="text" name="Date" value="{{ dt }}">
+                    <br>
+                    Email:<br>
+                    <input type="text" name="Email" value="{{ email }}">
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <br><br><br>
+                <!-- <p>{{ text|linebreaksbr }}</p> -->
             </body>
-        </div>
+        </div>  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

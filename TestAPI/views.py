@@ -7,6 +7,7 @@ from django.views import View
 from AbbyyOnlineSdk import AbbyyOnlineSdk
 from time import sleep
 import os
+import re
 
 #Necessary for uploading the image from user to server
 class Upload(View):
@@ -76,9 +77,21 @@ class ViewText(View):
         #open the file
         file_to_open = open(os.path.join(settings.BASE_DIR, output), 'r')
         text = file_to_open.read()
+
+        phone = r'\d{2}-\d{3}-\d{5}|\d{10}|\+\d{2}-\d{2}-\d{3}-\d{5}|\+\d{2}-\d{5}-\d{5}'
+        email = r'[a-zA-Z0-9]\S*@\S*[a-zA-Z]'
+        name = r'[a-zA-Z]{1,20}'
+
+        phn = re.findall(phone, text)
+        em = re.findall(email, text)
+        nm = re.findall(name, text)
         
         context = {
         'text':text,
+        'phn':phn[0],
+        # 'em':em[0],
+        'firstName':nm[0],
+        'lastName':nm[1],
         }
 
         file_to_open.close()
